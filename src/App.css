@@ -14,11 +14,11 @@
 }
 
 .normal-button {
- background-color: #61dafb;
- color: #fff;
- border:0  solid #61dafb;
- border-radius: 5px;
- padding: 5px;
+  background-color: #61dafb;
+  color: #fff;
+  border: 0 solid #61dafb;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .normal-button:hover {
@@ -27,8 +27,8 @@
   cursor: pointer;
 }
 
-.normal-input input{
-  width: 300px;
+.normal-input input {
+  width: 100%;
   border-radius: 5px;
   border: 0 solid #61dafb;
   color: #61dafb;
@@ -36,14 +36,22 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* background-color: #282c34; */
+  min-height: calc(100vh - 42px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.Container {
+  background-color: #d3d3d3;
+}
+
+.Container > nav {
+  background-color: powderblue;
 }
 
 .App-link {
@@ -57,4 +65,83 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+} */
+
+ol,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul > li {
+  display: inline-block;
+  padding: 10px;
+}
+
+ul > li > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul > li > a:hover {
+  text-decoration: none;
+  color: #282c34;
+  cursor: pointer;
+}
+
+ul > li:hover {
+  text-decoration: none;
+  background-color: teal;
+  color: #282c34;
+  cursor: pointer;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  min-height: calc(100vh - 42px);
+  align-items: center;
+}
+
+.game-info {
+  margin-left: 20px;
 }
